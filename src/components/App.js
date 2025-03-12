@@ -15,13 +15,13 @@ const App = () => {
     }
 
   return (
-    <div className="app">
+    <div id="main">
         <h1 className="title">Our Menu</h1>
         <div className="buttons">
-        {allCategories.map((category) => (
+        {allCategories.map((category,index) => (
           <button
-            key={category}
-            className="filter-btn"
+            key={index}
+            id={`filter-btn-${index}`}
             onClick={() => filterItems(category)}
           >
             {category}
